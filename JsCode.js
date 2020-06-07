@@ -1,7 +1,7 @@
 
           let JS = document.getElementById('JS');
           let Git = document.getElementById('Git');
-          let list0 = document.getElementById('list0');
+          let React = document.getElementById('React');
 
           function showHide(event) {
               let target = event.target; // где был клик?
