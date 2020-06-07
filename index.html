@@ -10,7 +10,7 @@
 
   <div id="main" class="main">
       <h1 title="Библиотека jQuery помогает легко получать доступ к любому элементу DOM">JavaScript + jQuery</h1>
-      <ol class="list" id="list" title="Нажать, чтобы увидеть ответ">
+      <ol class="list" id="JS" title="Нажать, чтобы увидеть ответ">
           <li>Какие <i>типы данных</i> существуют в стандарте ECMAScript? <span class="answer">
               Восемь типов данных:
                   <ol><li>Number;</li>  <li>String;</li> <li>Boolean;</li> <li>BigInt(number);</li> <li>Object;</li>
@@ -876,7 +876,7 @@
       </ol>
 
       <h1 title="React — JavaScript-библиотека с открытым исходным кодом для разработки пользовательских интерфейсов.">React</h1>
-      <ol id="list0">
+      <ol id="React">
           <li>Что такое JSX? <span class="answer"></span> </li>
           <li>Что такое Virtual DOM в React и как он работает? <span class="answer"></span> </li>
           <li>Что такое render() и зачем он нужен? <span class="answer"></span> </li>
@@ -897,7 +897,7 @@
       </ol>
 
       <h1 title="Распределённая система управления версиями">Git</h1>
-      <ol id="list1">
+      <ol id="Git">
           <li>Что такое <i>Git</i>? Для чего он нужен?
               <span class="answer">Ответ</span></li>
           <li>Как проиндексировать изменения ?
@@ -952,8 +952,8 @@
 
 
       <script>
-          let list = document.getElementById('list');
-          let list1 = document.getElementById('list1');
+          let JS = document.getElementById('JS');
+          let Git = document.getElementById('Git');
           let list0 = document.getElementById('list0');
 
           function showHide(event) {
@@ -971,9 +971,9 @@
 
           };
 
-          list.addEventListener("click", showHide);
-          list1.addEventListener("click", showHide);
-          list0.addEventListener("click", showHide);
+          JS.addEventListener("click", showHide);
+          Git.addEventListener("click", showHide);
+          React.addEventListener("click", showHide);
 
       </script>
 </body>
