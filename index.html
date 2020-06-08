@@ -862,16 +862,65 @@
               </span></li>
           <li>Как при помощи jQuery повесить обработчик на нажатие клавиши Enter (на весь документ)?
               <span class="answer">
-
+               <code>$(window).on('keyup', function(e){
+                            if (e.key === 'Enter') {
+                                console.log('Enter');
+                            }
+                        });</code>
               </span></li>
           <li>Как предотвратить стандартное поведение браузера для какого-нибудь события?
-              <span class="answer">Ответ</span></li>
+              <span class="answer">
+              Есть два способа отменить действие браузера:
+                  <ul>
+                      <li>Основной способ – это воспользоваться объектом event. Для отмены действия браузера существует стандартный метод event.preventDefault().</li>
+                      <li>Если же обработчик назначен через on /событие/ (не через addEventListener), то также можно вернуть false из обработчика.</li>
+                  </ul>
+                  В следующем примере при клике по ссылке переход не произойдёт:
+                  <code>\<\a href="/" onclick="return false">Нажми здесь\<\/\a>
+                            или
+                        <\a href="/" onclick="event.preventDefault()">здесь<\/\a>
+                  </code>
+              </span></li>
           <li>Что такое DOM-дерево и как с ним работать? Например, как в него вставить новый элемент?
-              <span class="answer">Ответ</span></li>
-          <li>Что такое window, location , document ?
-              <span class="answer">Ответ</span></li>
+              <span class="answer">
+               <p>
+                   <i>DOM (от англ. Document Object Model — «объектная модель документа»)</i> — это независящий от платформы и языка программный интерфейс, позволяющий программам
+                   и скриптам получить доступ к содержимому HTML-, XHTML- и XML-документов, а также изменять содержимое, структуру и оформление таких документов.
+               </p>
+                  <p>DOM-узел можно создать двумя методами:
+                  <ul>
+                  <li><i>document.createElement(tag)</i>
+                        Создаёт новый элемент с заданным тегом:
+                  <code>let div = document.createElement('div');</code>
+                  </li>
+                  <li><i>document.createTextNode(text)</i>
+                         Создаёт новый текстовый узел с заданным текстом:
+                  <code>let textNode = document.createTextNode('А вот и я');</code>
+                  </li>
+              </ul>
+                  </p>
+              </span></li>
+          <li>Что такое <i>window,</i> <i>location,</i> <i>document</i> ?
+              <span class="answer">
+              <p>Объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Window">window</a> представляет собой окно, содержащее DOM документ; свойство document указывает на DOM document,
+                  загруженный в данном окне. Окно текущего документа может быть получено с помощью свойства document.defaultView.</p>
+                  <p>Интерфейс <a href="https://developer.mozilla.org/ru/docs/Web/API/Location">Location</a> представляет собой адрес (URL) объекта, с которым он связан. Его модификации отражаются на родительском объекте.
+                      Интерфейсы Document и Window имеют подобный Location, к которому можно получить доступ через Document.location и Window.location соответственно.</p>
+                  <p>Каждая веб-страница, которая загружается в браузер, имеет свой собственный объект <a href="https://developer.mozilla.org/ru/docs/Web/API/Document">document</a>. Интерфейс документа служит точкой входа для получения содержимого веб-страницы (всего DOM - дерева, включая такие элементы как /body/ и /table/), а также обеспечивает функциональность,
+                  которая является глобальной для документа, например, для получения URL-адреса страницы или создания новых элементов в документе).</p>
+              </span></li>
           <li>Что такое <i>MVC</i>?
-              <span class="answer">Ответ</span></li>
+              <span class="answer">
+               <i>Model-View-Controller</i> (MVC, «Модель-Представление-Контроллер», «Модель-Вид-Контроллер») — схема разделения данных приложения,
+                  пользовательского интерфейса и управляющей логики на три отдельных компонента: модель,
+                  представление и контроллер — таким образом, что модификация каждого компонента может осуществляться независимо.
+                  <ul>
+                      <li><i>Модель</i> (Model) предоставляет данные и реагирует на команды контроллера, изменяя своё состояние.</li>
+                      <li><i>Представление</i> (View) отвечает за отображение данных модели пользователю, реагируя на изменения модели.</li>
+                      <li><i>Контроллер</i> (Controller) интерпретирует действия пользователя, оповещая модель о необходимости изменений</li>
+                  </ul>
+                  <p><a href="https://ru.hexlet.io/blog/posts/chto-takoe-mvc-rasskazyvaem-prostymi-slovami">Model-View-Controller</a></p>
+              </span></li>
           <p><a href="https://amiskov.github.io/frontend-handbook/jquery/#%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9-%D1%81%D1%82%D0%B0%D1%80%D1%82">Инфа для изучения jQuery</a></p>
           <p><a href="https://antonshevchuk.gitbooks.io/jquery-for-beginners/content/">Учебник по jQuery</a></p>
       </ol>
