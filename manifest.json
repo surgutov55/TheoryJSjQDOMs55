@@ -2,5 +2,12 @@
   "name": "TheoryJSjQDOMs55",
   "short_name": "TheoryJS",
   "start_url": "index.html",
-  "display": "standalone"
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "type": "image/png", 
+      "sizes": "96x96"
+    }
+  ]
 }
